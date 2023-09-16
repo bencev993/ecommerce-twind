@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleSprint</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+    <div class="w-full bg-gray-100 text-center py-2 italic">
+        <span class="">Free Shipping | Up to 50% off</span>
+    </div>
+    <div class="wrapper px-4 py-6 md:px-8 lg:px-20 xl:px-40">
+        <header class="container py-6 mx-auto sticky top-0 z-20 bg-gray-50 bg-opacity-80">
+            <nav class="flex items-center md:px-4">
+                <div class="flex flex-wrap items-center justify-between w-full">
+                    <button id="mobile-menu-button" class="md:hidden px-2 focus:outline-none">
+                        <svg class="w-7 h-7 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                    
+                    <a class="text-lg sm:text-xl font-bold inline-flex items-center px-2 md:px-4" href="#">
+                        <img src="assets/images/logo.png" class="w-12 h-12 sm:w-14 sm:h-14">
+                        <span>STYLESPRINT</span>
+                    </a>
+                    <ul class="inline-flex">
+                        <li class="px-2"><img src="assets/images/heart-icon.png" class="w-5 h-5"></li>
+                        <li class="px-2"><img src="assets/images/male-icon.png" class="w-5 h-5"></li>
+                        <li class="px-2"><img src="assets/images/cart-line-icon.png" class="w-5 h-5"></li>
+                    </ul>
+                    <ul class="hidden md:flex">
+                        <li><a href="#" class="hover:text-gray-400 px-2">Home</a></li>
+                        <li><a href="#" class="hover:text-gray-400 px-2">Products</a></li>
+                        <li><a href="#" class="hover:text-gray-400 px-2">Collections</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="mobile-menu" class="hidden mt-4">
+                <ul class="space-y-2">
+                    <li><a href="#" class="block px-4 py-2">Home</a></li>
+                    <li><a href="#" class="block px-4 py-2">Products</a></li>
+                    <li><a href="#" class="block px-4 py-2">Collections</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="hero container mx-auto">
+            <div class="relative overflow-hidden bg-gray-900">
+                <div class="carousel-container h-96 uppercase text-white">
+                    <div class="carousel h-full" data-ride="carousel" data-interval="6000">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item slide-1 fade h-full flex justify-center items-center">
+                            <div class="text-center px-4 z-10">
+                                <h2 class="text-2xl py-4 font-bold">Classic Elegance for Every Occasion</h2>
+                                <a href="#" class="text-sm bg-blue-700 px-4 py-1">Shop Now</a>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-item slide-2 fade h-full flex justify-center items-center">
+                            <div class="text-center px-4 z-10">
+                                <h2 class="text-2xl py-4 font-bold">Unleash Your Inner Trendsetter</h2>
+                                <a href="#" class="text-sm bg-blue-700 px-4 py-1">Browse now</a>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-item slide-3 fade h-full flex justify-center items-center">
+                            <div class="text-center px-4 z-10">
+                                <h2 class="text-2xl py-4 font-bold">Comfort Meets Style, Every Step of the Way</h2>
+                                <a href="#" class="text-sm bg-blue-700 px-4 py-1">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Dots -->
+                <div class="absolute bottom-0 left-0 right-0 flex justify-center pb-4">
+                    <div class="carousel-dots inline-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current dot cursor-pointer mx-1" viewBox="0 0 20 20" fill="currentColor">
+                            <circle cx="10" cy="10" r="9" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current dot cursor-pointer mx-1" viewBox="0 0 20 20" fill="currentColor">
+                            <circle cx="10" cy="10" r="9" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current dot cursor-pointer mx-1" viewBox="0 0 20 20" fill="currentColor">
+                            <circle cx="10" cy="10" r="9" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mx-auto my-10">
+            <div class="flex h-72 uppercase text-white text-sm">
+                <div class="sale-img w-full flex flex-col justify-evenly items-center">
+                    <span class="font-bold text-2xl">up to 50% OFF</span>
+                    <span class="tracking-widest font-bold">Sale ends in</span>
+                    <div class="inline-flex gap-5 justify-center">
+                        <div class="flex flex-col items-center bg-gray-800 py-1 px-3 bg-opacity-30 w-20">
+                            <span class="text-xl">7</span>
+                            <span class="text-xs">Hours</span>
+                        </div>
+                        <div class="flex flex-col items-center bg-gray-800 py-1 px-3 bg-opacity-30 w-20">
+                            <span class="text-xl">7</span>
+                            <span class="text-xs">Minutes</span>
+                        </div>
+                        <div class="flex flex-col items-center bg-gray-800 py-1 px-3 bg-opacity-30 w-20">
+                            <span class="text-xl">5</span>
+                            <span class="text-xs">Seconds</span>
+                        </div>
+                    </div>
+                    <a href="#" class="bg-blue-700 px-4 py-1">Shop Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container relative mx-auto my-10 bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">New Arrivals</h2>
+            <div class="product-carousel grid overflow-hidden grid-flow-col">
+                <!-- <div class="w-full sm:w-1/2 md:w-1/2 lg:w-full p-4">
+                    <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+                        <img src="assets/images/shoes.jpg" alt="Product 1" class="w-full">
+                        <h2 class="text-xl font-semibold">Card 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div> -->
+                <div class="card text-center">
+                    <div class="img h-56 w-48 sm:h-64 xl:h-80 bg-gray-100">
+                        <img class="" src="assets/images/shoes.png" draggable="false" alt="Product 1">
+                    </div>
+                    <h2 class="text-xl font-semibold">Card ELSŐ</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="img h-56 w-48 sm:h-64 xl:h-80 bg-gray-100">
+                        <img class="" src="assets/images/shoes.png" draggable="false" alt="Product 1">
+                    </div>
+                    <h2 class="text-xl font-semibold">Card MÁSODIK</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="img h-56 w-48 sm:h-64 xl:h-80 bg-gray-100">
+                        <img class="" src="assets/images/shoes.png" draggable="false" alt="Product 1">
+                    </div>
+                    <h2 class="text-xl font-semibold">Card HARMADIK</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="img h-56 w-48 sm:h-64 xl:h-80 bg-gray-100">
+                        <img class="" src="assets/images/shoes.png" draggable="false" alt="Product 1">
+                    </div>
+                    <h2 class="text-xl font-semibold">Card 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="img h-56 w-48 sm:h-64 xl:h-80 bg-gray-100">
+                        <img class="" src="assets/images/shoes.png" draggable="false" alt="Product 1">
+                    </div>
+                    <h2 class="text-xl font-semibold">Card 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="img h-56 w-48 sm:h-64 xl:h-80 bg-gray-100">
+                        <img class="" src="assets/images/shoes.png" draggable="false" alt="Product 1">
+                    </div>
+                    <h2 class="text-xl font-semibold">Card 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="img h-56 w-48 sm:h-64 xl:h-80 bg-gray-100">
+                        <img class="" src="assets/images/shoes.png" draggable="false" alt="Product 1">
+                    </div>
+                    <h2 class="text-xl font-semibold">Card 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="img h-56 w-48 sm:h-64 xl:h-80 bg-gray-100">
+                        <img class="" src="assets/images/shoes.png" draggable="false" alt="Product 1">
+                    </div>
+                    <h2 class="text-xl font-semibold">Card 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                
+                
+                <button id="prev-button" class="arrow-btn absolute top-30 left-0 flex items-center justify-center bg-gray-800  hover:bg-opacity-70 text-white h-48 w-6 transition opacity-30 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <button id="next-button" class="arrow-btn absolute top-30 right-0 flex items-center justify-center bg-gray-800  hover:bg-opacity-70 text-white h-48 w-6 transition opacity-30 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <section class="container mx-auto my-10">
+            <h2 class="text-2xl font-semibold mb-4">Collections</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#" class="p-4 text-center rounded">Collection 1</a>
+                <!-- Add more collection items here -->
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2023 STYLESPRINT All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

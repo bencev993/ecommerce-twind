@@ -1,0 +1,197 @@
+body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+img {
+    max-width: none !important;
+}
+
+.carousel-item {
+    display: none;
+    
+}
+
+.slide-1 {
+    position: relative;
+    background: url('/assets/images/hangers.jpg') no-repeat center center/cover;
+}
+
+.slide-2 {
+    position: relative;
+    background: url('/assets/images/shirts.jpg') no-repeat center center/cover;
+}
+
+.slide-3 {
+    position: relative;
+    background: url('/assets/images/store.jpg') no-repeat center center/cover;
+}
+
+.slide-1::before,
+.slide-2::before,
+.slide-3::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.sale-img {
+    background: url('/assets/images/shoes-sale.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.sale-img > * {
+    z-index: 10;
+}
+
+.sale-img::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.top-30 {
+    top: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .product-carousel {
+    --grid-layout-gap: 1rem;
+    --grid-column-count: 1;
+    --grid-item--min-width: 100px;
+    
+    --gap-count: calc(var(--grid-column-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+    --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+    
+    grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+    grid-gap: var(--grid-layout-gap);
+} */
+
+.product-carousel {
+    --grid-layout-gap: 2px;
+    --grid-column-count: 2;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / var(--grid-column-count)) -14px);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.product-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.product-carousel .card {
+    scroll-snap-align: start;
+    padding: 2.5rem;
+    cursor: pointer;
+}
+
+.card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-carousel.swiping {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.product-carousel.swiping .card {
+    cursor: grab;
+    user-select: none;
+}
+
+@media screen and (min-width: 400px) {
+    .product-carousel {
+        --grid-layout-gap: 2px;
+        --grid-column-count: 2;
+        --grid-item--min-width: 100px;
+    }
+
+    .product-carousel .card {
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .product-carousel {
+        --grid-layout-gap: 0.4rem;
+        --grid-column-count: 3;
+        --grid-item--min-width: 100px;
+    }
+
+    .product-carousel .card {
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .product-carousel {
+        --grid-column-count: 3;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .product-carousel {
+        --grid-column-count: 4;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .product-carousel {
+        --grid-column-count: 5;
+    }
+}
+
+@media screen and (min-width: 1536px) {
+    .product-carousel {
+        --grid-column-count: 4;
+    }
+}
