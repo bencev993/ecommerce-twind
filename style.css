@@ -108,17 +108,31 @@ img {
     
     grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
     grid-gap: var(--grid-layout-gap);
-} */
 
-.product-carousel {
-    --grid-layout-gap: 2px;
-    --grid-column-count: 2;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / var(--grid-column-count)) -14px);
     overflow-x: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+} */
+
+/* .product-carousel {
+    --grid-layout-gap: 30px;
+    display: grid;
+    grid-auto-flow: column;
+    column-count: 2;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    gap: var(--grid-layout-gap);
+} */
+
+.product-carousel {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    /* scroll-snap-type: x mandatory; */
     scrollbar-width: none;
 }
 
@@ -127,15 +141,22 @@ img {
 }
 
 .product-carousel .card {
+    min-width: 100%;
     scroll-snap-align: start;
-    padding: 2.5rem;
     cursor: pointer;
+    padding: 0 2rem;
+    flex: 1;
+}
+
+.card .img {
+    padding: 4rem 0;
 }
 
 .card .img img {
-    width: 100%;
+    width: 80%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    margin: auto;
 }
 
 .product-carousel.swiping {
@@ -148,27 +169,23 @@ img {
     user-select: none;
 }
 
+
 @media screen and (min-width: 400px) {
     .product-carousel {
-        --grid-layout-gap: 2px;
-        --grid-column-count: 2;
-        --grid-item--min-width: 100px;
+
     }
 
     .product-carousel .card {
-        padding: 1rem;
+        
     }
 }
 
 @media screen and (min-width: 640px) {
     .product-carousel {
-        --grid-layout-gap: 0.4rem;
-        --grid-column-count: 3;
-        --grid-item--min-width: 100px;
     }
 
     .product-carousel .card {
-        padding: 1rem;
+        min-width: 50%;
     }
 }
 
@@ -176,22 +193,35 @@ img {
     .product-carousel {
         --grid-column-count: 3;
     }
+
+    .product-carousel .card {
+        min-width: 33.33%;
+    }
 }
 
 @media screen and (min-width: 1024px) {
     .product-carousel {
-        --grid-column-count: 4;
+    }
+
+    .product-carousel .card {
+        min-width: 25%;
     }
 }
 
 @media screen and (min-width: 1280px) {
     .product-carousel {
-        --grid-column-count: 5;
+    }
+
+    .product-carousel .card {
+        min-width: 20%;
     }
 }
 
 @media screen and (min-width: 1536px) {
     .product-carousel {
-        --grid-column-count: 4;
+    }
+
+    .product-carousel .card {
+        min-width: 16.66%;
     }
 }
