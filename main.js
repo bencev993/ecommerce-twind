@@ -60,8 +60,6 @@ const productCarousel = document.querySelector('.product-carousel');
 const productCards = [...productCarousel.children];
 const cardWidth = productCarousel.querySelector('.card').offsetWidth;
 const numOfCards = Math.round(productCarousel.offsetWidth / cardWidth);
-const prevButton = document.getElementById('prev-button');
-const nextButton = document.getElementById('next-button');
 const arrowBtns = document.querySelectorAll('.arrow-btn');
 
 productCards.slice( - numOfCards).reverse().forEach(card => {
@@ -77,13 +75,6 @@ arrowBtns.forEach(btn => {
         productCarousel.scrollLeft += btn.id == "prev-button" ? - cardWidth : cardWidth;
     })
 })
-const startSwiping = (e) => {
-    console.log('start swiping')
-    isSwiping = true;
-    productCarousel.classList.add("swiping")
-    xPosition = e.pageX;
-    scrollLeft = productCarousel.scrollLeft
-}
 
 const resetScroll = () => {
     // Scroll to the end

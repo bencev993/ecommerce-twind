@@ -79,60 +79,28 @@ img {
     background-color: rgba(0,0,0,0.2);
 }
 
-.top-30 {
-    top: 30%;
+.top-50 {
+    top: 50%;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* .product-carousel {
-    --grid-layout-gap: 1rem;
-    --grid-column-count: 1;
-    --grid-item--min-width: 100px;
-    
-    --gap-count: calc(var(--grid-column-count) - 1);
-    --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
-    --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
-    
-    grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
-    grid-gap: var(--grid-layout-gap);
-
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-} */
-
-/* .product-carousel {
-    --grid-layout-gap: 30px;
-    display: grid;
-    grid-auto-flow: column;
-    column-count: 2;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    gap: var(--grid-layout-gap);
-} */
+/* Product carousel */
 
 .product-carousel {
     display: flex;
     flex-direction: row;
     overflow-x: auto;
     scroll-behavior: smooth;
-    /* scroll-snap-type: x mandatory; */
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
 }
 
@@ -141,14 +109,13 @@ img {
 }
 
 .product-carousel .card {
-    min-width: 100%;
+    min-width: 50%;
     scroll-snap-align: start;
     cursor: pointer;
-    padding: 0 2rem;
-    flex: 1;
+    padding: 0.7rem;
 }
 
-.card .img {
+.product-carousel .card .img {
     padding: 4rem 0;
 }
 
@@ -170,13 +137,20 @@ img {
 }
 
 
+
+/* Media queries */
+
 @media screen and (min-width: 400px) {
     .product-carousel {
 
     }
 
     .product-carousel .card {
-        
+
+    }
+
+    .product-carousel .card .img {
+        padding: 3rem 0;
     }
 }
 
@@ -185,17 +159,15 @@ img {
     }
 
     .product-carousel .card {
-        min-width: 50%;
+        min-width: 33.33%;
+        padding: 1.7rem;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .product-carousel {
-        --grid-column-count: 3;
-    }
-
     .product-carousel .card {
-        min-width: 33.33%;
+        min-width: 25%;
+        padding: 1rem 0.7rem;
     }
 }
 
@@ -204,16 +176,13 @@ img {
     }
 
     .product-carousel .card {
-        min-width: 25%;
+        min-width: 20%;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .product-carousel {
-    }
-
     .product-carousel .card {
-        min-width: 20%;
+        min-width: 16.66%;
     }
 }
 
@@ -221,7 +190,5 @@ img {
     .product-carousel {
     }
 
-    .product-carousel .card {
-        min-width: 16.66%;
-    }
+    
 }
