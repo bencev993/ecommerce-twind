@@ -1,10 +1,29 @@
 const screenWidth = window.screen.width;
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
+const closeBtn = document.getElementById('closeBtn');
 
-mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
+let hiddenMenu = true;
+
+mobileMenuButton.addEventListener('click', handleMenu)
+closeBtn.addEventListener('click', handleMenu)
+
+document.addEventListener('mouseup', (e) => {
+    if (!hiddenMenu && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden')
+        hiddenMenu = !hiddenMenu;
+    }
+})
+
+function handleMenu() {
+    if(hiddenMenu) {
+        mobileMenu.classList.remove('hidden')
+        mobileMenu.classList.add('fixed', 'top-0', 'left-0', 'w-auto', 'h-full', 'bg-white', 'shadow-lg')
+    } else {
+        mobileMenu.classList.add('hidden')
+    }
+    hiddenMenu = !hiddenMenu;
+}
 
 
 // Hero carousel
