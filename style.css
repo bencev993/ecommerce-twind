@@ -61,7 +61,7 @@ img {
 }
 
 .sale-img {
-    background: url('/assets/images/shoes-sale.jpg') no-repeat center center/cover;
+    background: url('/ecommerce-twind/assets/images/shoes-sale.jpg') no-repeat center center/cover;
     position: relative;
 }
 
