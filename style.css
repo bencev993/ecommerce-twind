@@ -20,17 +20,17 @@ img {
 
 .slide-1 {
     position: relative;
-    background: url('/assets/images/hangers.jpg') no-repeat center center/cover;
+    background: url('/ecommerce-twind/assets/images/hangers.jpg') no-repeat center center/cover;
 }
 
 .slide-2 {
     position: relative;
-    background: url('/assets/images/shirts.jpg') no-repeat center center/cover;
+    background: url('/ecommerce-twind/assets/images/shirts.jpg') no-repeat center center/cover;
 }
 
 .slide-3 {
     position: relative;
-    background: url('/assets/images/store.jpg') no-repeat center center/cover;
+    background: url('/ecommerce-twind/assets/images/store.jpg') no-repeat center center/cover;
 }
 
 .slide-1::before,
